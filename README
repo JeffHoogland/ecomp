@@ -1,3 +1,4 @@
-ecomp - OpenGL compositing manager based on compiz
+ecomp - OpenGL compositing manager based on compiz 0.6
 
-see http://code.google.com/p/itask-module/wiki/Stuff for instructions
+ecomp is the backend for the [Ecomorph](https://github.com/JeffHoogland/ecomorph) 
+[Moksha](https://github.com/JeffHoogland/moksha) Module
