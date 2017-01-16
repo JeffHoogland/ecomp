@@ -1,0 +1,6 @@
+*.o
+*.la
+*.lo
+ecomorph
+.deps/
+.libs/
