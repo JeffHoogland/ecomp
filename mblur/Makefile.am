@@ -5,8 +5,8 @@ libmblur_la_LDFLAGS = $(PFLAGS)
 libmblur_la_LIBADD = @ECOMP_LIBS@
 libmblur_la_SOURCES = mblur_options.c mblur_options.h mblur.c
 
-INCLUDES =                              \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

@@ -7,8 +7,8 @@ libcubereflex_la_LIBADD = @ECOMP_LIBS@
 libcubereflex_la_SOURCES = cubereflex_options.c cubereflex_options.h cubereflex.c
 #endif
 
-INCLUDES =                              \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

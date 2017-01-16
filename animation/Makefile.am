@@ -28,10 +28,10 @@ libanimation_la_SOURCES = animation.c \
 			  wave.c \
 			  zoomside.c
 
-INCLUDES =                              \
+AM_CPPFLAGS =                           \
 	-I/usr/include                      \
 	-I$(top_srcdir)/include             \
-	@ECOMP_CFLAGS@                     \
+	@ECOMP_CFLAGS@                      \
 	@CAIRO_CFLAGS@	                    \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \

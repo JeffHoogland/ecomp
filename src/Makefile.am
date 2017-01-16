@@ -1,9 +1,9 @@
-INCLUDES =			     \
-	@ECOMP_CFLAGS@		     \
-	@GL_CFLAGS@		     \
-	-I$(top_srcdir)/include	     \
-	-DPLUGINDIR=\"$(plugindir)\" \
-	-DIMAGEDIR=\"$(imagedir)\"   \
+AM_CPPFLAGS =                       \
+	@ECOMP_CFLAGS@                  \
+	@GL_CFLAGS@                     \
+	-I$(top_srcdir)/include	        \
+	-DPLUGINDIR=\"$(plugindir)\"    \
+	-DIMAGEDIR=\"$(imagedir)\"      \
 	-DMETADATADIR=\"$(metadatadir)\"
 
 bin_PROGRAMS = ecomorph

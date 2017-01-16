@@ -8,9 +8,9 @@ libthumbnail_la_SOURCES = thumbnail_options.c \
 			  thumbnail.c         \
 			  thumbnail_tex.h
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

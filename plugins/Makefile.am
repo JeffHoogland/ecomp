@@ -45,14 +45,14 @@ libinotify_la_SOURCES = inotify.c
 libinotify_module = libinotify.la
 endif
 
-INCLUDES =					\
-	@ECOMP_CFLAGS@				\
-	-DALL_LINGUAS="\"@ALL_LINGUAS@\""	\
-	-DLOCALEDIR="\"@datadir@/locale\""	\
-	-DPLUGINDIR=\"$(plugindir)\"		\
-	-DIMAGEDIR=\"$(imagedir)\"		\
-	-I$(top_srcdir)/include                 \
-	-DMETADATADIR=\"$(metadatadir)\"        \
+AM_CPPFLAGS =                           \
+	@ECOMP_CFLAGS@                      \
+	-DALL_LINGUAS="\"@ALL_LINGUAS@\""   \
+	-DLOCALEDIR="\"@datadir@/locale\""  \
+	-DPLUGINDIR=\"$(plugindir)\"        \
+	-DIMAGEDIR=\"$(imagedir)\"          \
+	-I$(top_srcdir)/include             \
+	-DMETADATADIR=\"$(metadatadir)\"    \
 	-DDATADIR=\"$(datadir)\"
 
 moduledir = $(plugindir)

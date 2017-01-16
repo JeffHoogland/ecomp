@@ -7,10 +7,10 @@ libtext_la_LIBADD = @ECOMP_LIBS@ @PANGO_LIBS@
 libtext_la_SOURCES = text.c
 endif
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
-	@PANGO_CFLAGS@			\
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
+	@PANGO_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

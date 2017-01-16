@@ -7,10 +7,10 @@ libwall_la_LIBADD = @ECOMP_LIBS@ @CAIRO_LIBS@
 libwall_la_SOURCES = wall_options.c wall_options.h wall.c
 endif
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
-	@CAIRO_CFLAGS@			\
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS                       \
+	@CAIRO_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

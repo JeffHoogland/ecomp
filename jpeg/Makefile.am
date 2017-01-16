@@ -8,8 +8,8 @@ libimgjpeg_la_SOURCES = imgjpeg_options.c imgjpeg_options.h imgjpeg.c
 endif
 
 INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

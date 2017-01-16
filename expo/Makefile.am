@@ -5,9 +5,9 @@ libexpo_la_LDFLAGS = $(PFLAGS)
 libexpo_la_LIBADD = @ECOMP_LIBS@ -lGLU
 libexpo_la_SOURCES = expo_options.c expo_options.h expo.c
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

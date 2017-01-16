@@ -5,9 +5,9 @@ libshift_la_LDFLAGS = $(PFLAGS)
 libshift_la_LIBADD = @ECOMP_LIBS@
 libshift_la_SOURCES = shift_options.c shift_options.h shift.c
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \

@@ -7,9 +7,9 @@ libscaleaddon_la_LIBADD = @ECOMP_LIBS@
 libscaleaddon_la_SOURCES = scaleaddon_options.c scaleaddon_options.h scaleaddon.c
 
 
-INCLUDES =                              \
-	-I$(top_srcdir)/include         \
-	@ECOMP_CFLAGS@                  \
+AM_CPPFLAGS =                           \
+	-I$(top_srcdir)/include             \
+	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
 	-DLOCALEDIR="\"@datadir@/locale\""  \
