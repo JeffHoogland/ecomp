@@ -9,7 +9,7 @@ endif
 
 AM_CPPFLAGS =                           \
 	-I$(top_srcdir)/include             \
-	@ECOMP_CFLAGS                       \
+	@ECOMP_CFLAGS@                      \
 	@CAIRO_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
 	-DLIBDIR='"$(libdir)"'              \
