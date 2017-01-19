@@ -7,7 +7,7 @@ libimgjpeg_la_LIBADD = @ECOMP_LIBS@ -ljpeg
 libimgjpeg_la_SOURCES = imgjpeg_options.c imgjpeg_options.h imgjpeg.c
 endif
 
-INCLUDES =                              \
+AM_CPPFLAGS  =                              \
 	-I$(top_srcdir)/include             \
 	@ECOMP_CFLAGS@                      \
 	-DDATADIR='"$(compdatadir)"'        \
