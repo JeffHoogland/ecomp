@@ -9,7 +9,7 @@ m4_define(ecomp_version_micro, 2)
 
 AC_INIT([ecomp],
 	[ecomp_version_major().ecomp_version_minor().ecomp_version_micro()],
-	[hannes.janetzek@gmail.com])
+	[jeffhoogland@linux.com])
 
 ECOMP_VERSION_MAJOR=ecomp_version_major()
 ECOMP_VERSION_MINOR=ecomp_version_minor()
