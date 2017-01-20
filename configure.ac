@@ -258,8 +258,34 @@ po/Makefile.in
 data/Makefile
 ])
 
-echo ""
-echo "the following plugins will are required:"
-echo "  inotify:     $use_inotify"
-echo ""
-echo ""
+# report
+txt_strip() {
+  echo "[$]@" | sed -e 's/^[[ \t]]*\([[^ \t]]*\)[[ \t]]*$/\1/g'
+}
+
+echo
+cat << SUMMARY_EOF
+Summary:
+ * project.........: $PACKAGE $VERSION
+ * prefix..........: $(txt_strip $prefix)
+ * CFLAGS..........: $(txt_strip $CFLAGS)
+ * Max Desktops....: $MAX_DESKTOPS
+SUMMARY_EOF
+
+echo
+cat << PLUGINS_EOF
+Optional Plugins:
+ *  inotify:     $use_inotify
+ *  jpeg   :     $use_jpeg
+PLUGINS_EOF
+
+echo
+cat << COMPILE_EOF
+Compilation........: make
+COMPILE_EOF
+
+echo
+cat << INSTALL_EOF
+Installation.......: make install (as root if needed, with 'su' or 'sudo')
+INSTALL_EOF
+echo
