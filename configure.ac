@@ -39,6 +39,8 @@ AC_CONFIG_MACRO_DIR([m4])
 ALL_LINGUAS=""
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION([0.19])
 GETTEXT_PACKAGE=ecomp
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package.])
 AC_SUBST(GETTEXT_PACKAGE)
@@ -226,9 +228,6 @@ AC_SUBST(xsltdir)
 
 BCOP_BIN=../bcop/src/bcop.in
 AC_SUBST(BCOP_BIN)
-
-intltoolize --force || die "intltoolize failed"
-
 
 AC_OUTPUT([
 ecomp.pc

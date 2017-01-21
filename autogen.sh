@@ -1,15 +1,18 @@
 #!/bin/sh
 
-srcdir=`dirname $0`
+srcdir=$(dirname "$0")
 test -z "$srcdir" && srcdir=.
 
 ORIGDIR=`pwd`
 cd $srcdir
 
-autoreconf -v --install || exit 1
+mkdir -p m4
+aclocal -I m4 --install || exit 1
+autoreconf --verbose --force --install || exit 1
 intltoolize --copy --force --automake || exit 1
-glib-gettextize --copy --force || exit 1
 
 cd $ORIGDIR || exit $?
 
-$srcdir/configure --enable-maintainer-mode "$@"
+if [ -z "$NOCONFIGURE" ]; then
+    "$srcdir/configure" "$@" || exit 1
+fi
