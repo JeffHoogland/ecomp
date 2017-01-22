@@ -30,6 +30,8 @@ AC_ISC_POSIX
 AC_PROG_CC
 AC_PROG_CPP
 AC_PROG_CXX
+# Silence warning: ar: 'u' modifier ignored since 'D' is the default
+AC_SUBST(AR_FLAGS, [cr])
 LT_PREREQ([2.2.0])
 LT_INIT
 AC_HEADER_STDC
